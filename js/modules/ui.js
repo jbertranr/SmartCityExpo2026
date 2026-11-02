@@ -152,9 +152,11 @@ export function renderEventCard(item, { wallClock, startingSoonMinutes, onOpen, 
   });
   actionBtns.append(attendBtn);
 
-  const body = document.createElement("a");
+  const body = document.createElement("div");
   body.className = "sce-card__body";
-  wireCardNavigate(body, item, onOpen);
+  const bodyLink = document.createElement("a");
+  bodyLink.className = "sce-card__body-link";
+  wireCardNavigate(bodyLink, item, onOpen);
 
   const text = el("div", "sce-card__text");
   text.append(el("p", "sce-card__title", item.title));
@@ -163,11 +165,15 @@ export function renderEventCard(item, { wallClock, startingSoonMinutes, onOpen, 
     const suffix = item.speakers.length > 2 ? ` + ${item.speakers.length - 2}` : "";
     text.append(el("p", "sce-card__speakers", `${names}${suffix}`));
   }
+  bodyLink.append(text);
 
   const timeLine = el("p", "sce-card__time");
   timeLine.append(iconEl("fa-solid fa-calendar-day"), document.createTextNode(" " + formatEventDateTime(item)));
-  text.append(timeLine);
+  const metaRow = el("div", "sce-card__meta-row");
+  metaRow.append(timeLine, actionBtns);
+  body.append(bodyLink, metaRow);
 
+  const details = el("div", "sce-card__details");
   if (item.venue && !hideVenue) {
     const venueLine = el("p", "sce-card__venue");
     venueLine.append(iconEl("fa-solid fa-location-dot"));
@@ -175,20 +181,20 @@ export function renderEventCard(item, { wallClock, startingSoonMinutes, onOpen, 
     venueText.append(el("span", "sce-card__venue-name", item.venue.name));
     if (item.venue.zone) venueText.append(el("span", "sce-card__venue-zone", item.venue.zone));
     venueLine.append(venueText);
-    text.append(venueLine);
+    details.append(venueLine);
   }
 
   if (item.tracks && item.tracks.length) {
-    text.append(el("p", "sce-card__tracks", item.tracks.map((t) => t.name).join(" · ")));
+    details.append(el("p", "sce-card__tracks", item.tracks.map((t) => t.name).join(" · ")));
   }
 
   if (wallClock) {
     const { node } = statusPill(item, wallClock, startingSoonMinutes);
     node.classList.add("sce-card__status");
-    text.append(node);
+    details.append(node);
   }
-  body.append(text);
-  card.append(top, body, actionBtns);
+  body.append(details);
+  card.append(top, body);
 
   return card;
 }

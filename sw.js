@@ -9,7 +9,7 @@
 // forçar que tothom rebi l'última versió del shell de seguida — un
 // CACHE_NAME que no canvia mai fa que el navegador no detecti que hi ha
 // service worker nou per instal·lar.
-const CACHE_NAME = "sce-shell-v3";
+const CACHE_NAME = "sce-shell-v4";
 
 const SHELL_FILES = [
   "./",

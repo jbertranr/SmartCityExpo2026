@@ -427,20 +427,38 @@ html.sce-text-xl { font-size: 125%; }
 .sce-card__body {
   display: block;
   width: 100%;
+  min-height: 44px;
+}
+
+.sce-card__body-link {
+  display: block;
+  width: 100%;
   text-align: left;
   cursor: pointer;
   font: inherit;
   background: transparent;
-  border: none;
   padding: 0;
-  min-height: 44px;
   text-decoration: none;
   color: inherit;
 }
 .sce-card__text { min-width: 0; }
-.sce-card__body:hover,
-.sce-card__body:visited,
-.sce-card__body:active { text-decoration: none; color: inherit; }
+.sce-card__body-link:hover,
+.sce-card__body-link:visited,
+.sce-card__body-link:active { text-decoration: none; color: inherit; }
+
+.sce-card__meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ds-space-2);
+}
+.sce-card__meta-row .sce-card__action-btns {
+  margin-top: 0;
+}
+.sce-card__meta-row .sce-card__time {
+  flex: 1;
+  min-width: 0;
+}
 
 .sce-card__title {
   margin: 0;
