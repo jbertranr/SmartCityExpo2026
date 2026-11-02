@@ -288,10 +288,16 @@ html.sce-text-xl { font-size: 125%; }
 .sce-filters {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: var(--ds-space-2);
   padding: var(--ds-space-3) var(--ds-space-4);
-  overflow-x: auto;
+  overflow: visible;
   border-bottom: 1px solid var(--ds-color-border);
+}
+
+.sce-filters .ds-button {
+  min-height: 2.75rem;
+  white-space: nowrap;
 }
 
 /* ── Contingut ── */
@@ -378,9 +384,11 @@ html.sce-text-xl { font-size: 125%; }
 
 .sce-card__top {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
   gap: var(--ds-space-2);
   margin-bottom: var(--ds-space-1);
+  padding-top: 1.65rem;
   min-height: 0;
 }
 
@@ -388,14 +396,16 @@ html.sce-text-xl { font-size: 125%; }
    ordre (a petició de l'usuari, 13/09/2026) — abans "Hi vaig" només es
    podia marcar des de la fitxa; ara també des de la targeta petita. */
 .sce-card__action-btns {
-  margin-left: auto;
   display: flex;
   gap: var(--ds-space-1);
   flex-shrink: 0;
+  position: absolute;
+  top: var(--ds-space-1);
+  right: var(--ds-space-2);
 }
 .sce-card__action-btn {
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -403,7 +413,7 @@ html.sce-text-xl { font-size: 125%; }
   border: 1px solid var(--ds-color-border);
   background: var(--ds-color-surface);
   color: var(--ds-color-muted);
-  font-size: 1rem;
+  font-size: 0.72rem;
   cursor: pointer;
 }
 .sce-card__action-btn:hover { background: var(--ds-color-surface-alt); }
