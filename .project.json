@@ -21,6 +21,10 @@
     {
       "label": "Smart City Expo 2026 — Explora",
       "path": "99_test/prj_smart_city_expo/aplicacions/smartCityExpo/index.html"
+    },
+    {
+      "label": "Smart City Expo 2026 — Ponents",
+      "path": "99_test/prj_smart_city_expo/aplicacions/smartCityExpo/ponents.html"
     }
   ]
 }

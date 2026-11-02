@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ca" data-ds-skin="neutra">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ponents · Smart City Expo 2026</title>
+  <meta name="description" content="Consulta, valora i segueix les sessions dels ponents del Smart City Expo 2026.">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1857c4">
+  <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/skins/skin-neutra.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components/card.css">
+  <link rel="stylesheet" href="assets/css/components/badge.css">
+  <link rel="stylesheet" href="assets/css/components/button.css">
+  <link rel="stylesheet" href="assets/css/components/input.css">
+  <link rel="stylesheet" href="assets/css/components/empty.css">
+  <link rel="stylesheet" href="assets/css/components/spinner.css">
+  <link rel="stylesheet" href="assets/css/components/modal.css">
+  <link rel="stylesheet" href="assets/css/components/tabbar.css">
+  <link rel="stylesheet" href="assets/css/components/typography.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <script src="assets/css/router.js"></script>
+  <script src="assets/css/components/modal.js"></script>
+  <script src="assets/css/components/tabbar.js"></script>
+  <script src="js/config.js"></script>
+</head>
+<body>
+  <a class="ds-skip-link" href="#main-content">Salta al contingut principal</a>
+  <header class="sce-header-wrap">
+    <div class="ds-site-header">
+      <button class="ds-icon-button sce-header__menu-btn" id="btn-open-nav" type="button" aria-haspopup="dialog" aria-controls="dlg-nav" aria-label="Obre el menú de navegació"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+      <div class="ds-site-header__text">
+        <p class="ds-site-header__title">Smart City Expo 2026</p>
+        <p class="ds-site-header__subtitle">Ponents i participacions</p>
+      </div>
+      <div class="sce-header__actions">
+        <button class="ds-icon-button sce-header__fontsize-btn" id="btn-fontsize" type="button" aria-label="Augmenta la mida de la lletra"><i class="fa-solid fa-text-height" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="ds-main" tabindex="-1">
+    <p class="ds-text ds-text--sm ds-text--muted sce-speakers-intro">Valora els ponents al teu dispositiu. Les valoracions són privades i es guarden només en aquest navegador.</p>
+    <div class="sce-select-icon sce-speakers-search">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <label class="sce-sr-only" for="sce-speakers-search">Cerca un ponent</label>
+      <input class="ds-input" type="search" id="sce-speakers-search" placeholder="Cerca per nom o càrrec" autocomplete="off">
+    </div>
+    <div class="sce-speakers-toolbar">
+      <span class="ds-badge ds-badge--primary" id="sce-speakers-count">0 ponents</span>
+      <label class="sce-speakers-rated-toggle"><input type="checkbox" id="sce-speakers-rated-only"> Només valorats</label>
+    </div>
+    <div id="sce-speakers-list" class="sce-speakers-list" aria-live="polite">
+      <p class="ds-text ds-text--sm ds-text--muted sce-loading"><span class="ds-spinner"></span> Carregant ponents…</p>
+    </div>
+  </main>
+
+  <nav class="ds-tabbar" aria-label="Navegació principal">
+    <a class="ds-tabbar__item" href="index.html"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span>Explora</span></a>
+    <a class="ds-tabbar__item" href="ara.html"><i class="fa-solid fa-bolt" aria-hidden="true"></i><span>Ara</span></a>
+  </nav>
+
+  <dialog class="ds-modal ds-modal--sm" id="dlg-nav" aria-labelledby="dlg-nav-title">
+    <div class="ds-modal__header">
+      <p class="ds-modal__title" id="dlg-nav-title">Menú</p>
+      <button class="ds-icon-button" data-ds-modal-close aria-label="Tanca"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    </div>
+    <div class="ds-modal__body">
+      <nav class="sce-nav-menu" aria-label="Navegació principal">
+        <a class="sce-nav-menu__item" data-nav-page="index" href="index.html"><span class="sce-nav-menu__icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></span><span class="sce-nav-menu__text"><span class="sce-nav-menu__title">Explora</span><span class="sce-nav-menu__desc">Cerca i filtra totes les sessions del congrés.</span></span></a>
+        <a class="sce-nav-menu__item" data-nav-page="ara" href="ara.html"><span class="sce-nav-menu__icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></span><span class="sce-nav-menu__text"><span class="sce-nav-menu__title">Ara</span><span class="sce-nav-menu__desc">Què està en curs, què comença aviat i què ve després.</span></span></a>
+        <a class="sce-nav-menu__item" data-nav-page="seleccio" href="index.html?seleccio=1"><span class="sce-nav-menu__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span class="sce-nav-menu__text"><span class="sce-nav-menu__title">Selecció recomanada</span><span class="sce-nav-menu__desc">Sessions prioritzades per a IA, dades i innovació pública.</span></span></a>
+        <a class="sce-nav-menu__item" data-nav-page="ponents" href="ponents.html"><span class="sce-nav-menu__icon"><i class="fa-solid fa-microphone-lines" aria-hidden="true"></i></span><span class="sce-nav-menu__text"><span class="sce-nav-menu__title">Ponents</span><span class="sce-nav-menu__desc">Valora persones i consulta totes les seves sessions.</span></span></a>
+      </nav>
+    </div>
+  </dialog>
+
+  <script src="js/fontsize.js"></script>
+  <script src="js/navmenu.js"></script>
+  <script src="js/ponents.js"></script>
+</body>
+</html>

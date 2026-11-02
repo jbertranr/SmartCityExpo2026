@@ -57,6 +57,17 @@ export function setAttendingIds(ids) {
   writeSet(K().attendance, new Set(ids));
 }
 
+// Valoració local dels ponents (0 = encara no valorat, 1–5 estrelles).
+export function getSpeakerRatings() {
+  return readJSON(K().speakerRatings, {});
+}
+export function setSpeakerRating(speakerKey, rating) {
+  const ratings = getSpeakerRatings();
+  if (rating === 0) delete ratings[speakerKey];
+  else ratings[speakerKey] = rating;
+  writeJSON(K().speakerRatings, ratings);
+}
+
 export { fullId };
 
 // ── Mode Ara / Planificar ──

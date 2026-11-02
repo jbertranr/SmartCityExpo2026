@@ -9,13 +9,14 @@
 // forçar que tothom rebi l'última versió del shell de seguida — un
 // CACHE_NAME que no canvia mai fa que el navegador no detecti que hi ha
 // service worker nou per instal·lar.
-const CACHE_NAME = "sce-shell-v1";
+const CACHE_NAME = "sce-shell-v2";
 
 const SHELL_FILES = [
   "./",
   "index.html",
   "ara.html",
   "fitxa.html",
+  "ponents.html",
   "manifest.json",
   "js/config.js",
   "js/ara.js",
@@ -25,6 +26,7 @@ const SHELL_FILES = [
   "js/fontsize.js",
   "js/planmode.js",
   "js/backup.js",
+  "js/ponents.js",
   "js/modules/storage.js",
   "js/modules/data.js",
   "js/modules/status.js",

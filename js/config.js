@@ -35,6 +35,7 @@ window.APP = {
   storageKeys: {
     favorites: "smartCityExpo:favorits",
     attendance: "smartCityExpo:assistencia",
+    speakerRatings: "smartCityExpo:valoracionsPonents",
     planMode: "smartCityExpo:mode",
     planDateTime: "smartCityExpo:dataHoraPlanificada",
     prefs: "smartCityExpo:preferencies",

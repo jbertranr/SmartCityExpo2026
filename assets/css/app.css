@@ -159,6 +159,125 @@ html.sce-text-xl { font-size: 125%; }
   gap: var(--ds-space-2);
 }
 
+/* ── Ponents ── */
+.sce-speakers-search {
+  margin-bottom: var(--ds-space-3);
+}
+
+.sce-speakers-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ds-space-2);
+  margin-bottom: var(--ds-space-3);
+}
+
+.sce-speakers-rated-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ds-space-1);
+  min-height: 2.75rem;
+  font-size: 0.78rem;
+  color: var(--ds-color-muted);
+}
+
+.sce-speakers-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-3);
+}
+
+.sce-speaker-card {
+  padding: var(--ds-space-3);
+}
+
+.sce-speaker-card__name {
+  margin: 0;
+  color: var(--ds-color-primary);
+  font-size: 1.05rem;
+}
+
+.sce-speaker-card__role {
+  margin: var(--ds-space-1) 0 var(--ds-space-2);
+  color: var(--ds-color-muted);
+  font-size: 0.8rem;
+}
+
+.sce-speaker-rating {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ds-space-2);
+  padding: var(--ds-space-2) 0;
+  border-top: 1px solid var(--ds-color-border);
+  border-bottom: 1px solid var(--ds-color-border);
+}
+
+.sce-speaker-rating__label {
+  font-size: 0.78rem;
+  color: var(--ds-color-muted);
+}
+
+.sce-speaker-rating__stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.sce-speaker-star {
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ds-color-border);
+  font-size: 1.45rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.sce-speaker-star.is-active,
+.sce-speaker-star:hover,
+.sce-speaker-star:focus-visible {
+  color: var(--ds-color-warning);
+}
+
+.sce-speaker-rating__clear {
+  margin-left: var(--ds-space-1);
+}
+
+.sce-speaker-card__sessions-title {
+  margin: var(--ds-space-3) 0 var(--ds-space-1);
+  font-size: 0.78rem;
+  color: var(--ds-color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.sce-speaker-card__sessions {
+  display: flex;
+  flex-direction: column;
+}
+
+.sce-speaker-session {
+  padding: var(--ds-space-2) 0;
+  border-bottom: 1px solid var(--ds-color-border);
+  color: var(--ds-color-primary);
+  font-size: 0.82rem;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.sce-speaker-session:last-child {
+  border-bottom: 0;
+}
+
+.sce-speaker-session:hover,
+.sce-speaker-session:focus-visible {
+  text-decoration: underline;
+}
+
 /* Fila de filtres ràpids (Preferits/Pendents). */
 .sce-filters {
   display: flex;
