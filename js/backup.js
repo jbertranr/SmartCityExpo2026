@@ -36,8 +36,7 @@
       app: "smartCityExpo",
       exportedAt: new Date().toISOString(),
       favorites: Array.from(m.state.favoriteIds()),
-      attendance: Array.from(m.state.attendingIds()),
-      speakerRatings: m.state.getSpeakerRatings()
+      attendance: Array.from(m.state.attendingIds())
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -132,7 +131,6 @@
     }
     const favorites = Array.isArray(data.favorites) ? data.favorites : [];
     const attendance = Array.isArray(data.attendance) ? data.attendance : [];
-    const speakerRatings = data.speakerRatings && typeof data.speakerRatings === "object" ? data.speakerRatings : {};
 
     const ok = window.confirm(
       `Es restauraran ${favorites.length} preferits i ${attendance.length} "hi vaig" — ` +
@@ -142,9 +140,6 @@
 
     m.state.setFavoriteIds(favorites);
     m.state.setAttendingIds(attendance);
-    for (const [speakerKey, rating] of Object.entries(speakerRatings)) {
-      if (Number.isInteger(rating) && rating >= 1 && rating <= 5) m.state.setSpeakerRating(speakerKey, rating);
-    }
     m.state.setLastBackupAt(new Date().toISOString());
     window.alert("Còpia restaurada. La pàgina es tornarà a carregar.");
     location.reload();

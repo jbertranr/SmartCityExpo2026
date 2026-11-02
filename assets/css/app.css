@@ -247,6 +247,12 @@ html.sce-text-xl { font-size: 125%; }
   margin-left: var(--ds-space-1);
 }
 
+.sce-speaker-rating__reason {
+  flex-basis: 100%;
+  font-size: 0.74rem;
+  color: var(--ds-color-muted);
+}
+
 .sce-speaker-card__sessions-title {
   margin: var(--ds-space-3) 0 var(--ds-space-1);
   font-size: 0.78rem;

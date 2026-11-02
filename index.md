@@ -57,8 +57,9 @@ Prefix d'ids/classes de la UI: `sce-`.
   centrada en IA urbana, dades municipals i innovació pública. És una vista fixa,
   independent dels preferits de cada usuari, definida a `js/config.js`.
 - La pantalla **Ponents** deriva un índex de les persones incloses a les sessions,
-  permet una valoració local d'1 a 5 estrelles i mostra totes les sessions on participa
-  cada ponent. Les valoracions no s'envien a cap servidor.
+  mostra una valoració editorial d'1 a 5 estrelles segons la rellevància de les seves
+  sessions per a IA urbana, dades i innovació pública, i mostra totes les sessions on
+  participa cada ponent.
 
 ## Com reimportar
 
