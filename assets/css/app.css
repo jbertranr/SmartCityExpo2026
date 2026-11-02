@@ -388,7 +388,6 @@ html.sce-text-xl { font-size: 125%; }
   flex-wrap: wrap;
   gap: var(--ds-space-2);
   margin-bottom: var(--ds-space-1);
-  padding-top: 1.65rem;
   min-height: 0;
 }
 
@@ -397,11 +396,10 @@ html.sce-text-xl { font-size: 125%; }
    podia marcar des de la fitxa; ara també des de la targeta petita. */
 .sce-card__action-btns {
   display: flex;
+  justify-content: flex-end;
   gap: var(--ds-space-1);
   flex-shrink: 0;
-  position: absolute;
-  top: var(--ds-space-1);
-  right: var(--ds-space-2);
+  margin-top: var(--ds-space-2);
 }
 .sce-card__action-btn {
   width: 25px;

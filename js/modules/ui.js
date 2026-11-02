@@ -151,7 +151,6 @@ export function renderEventCard(item, { wallClock, startingSoonMinutes, onOpen, 
     if (onToggleAttending) onToggleAttending(item);
   });
   actionBtns.append(attendBtn);
-  top.append(actionBtns);
 
   const body = document.createElement("a");
   body.className = "sce-card__body";
@@ -189,7 +188,7 @@ export function renderEventCard(item, { wallClock, startingSoonMinutes, onOpen, 
     text.append(node);
   }
   body.append(text);
-  card.append(top, body);
+  card.append(top, body, actionBtns);
 
   return card;
 }
