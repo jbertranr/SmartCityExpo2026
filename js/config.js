@@ -17,6 +17,21 @@ window.APP = {
   // dada del programa oficial.
   startingSoonMinutes: 45,
 
+  // Selecció editorial de sessions recomanades; els títols i la resta de
+  // dades es resolen sempre des de data/events.json.
+  recommendedEventIds: [
+    "opening-session-urban-solutions-real-impact",
+    "from-data-to-delivery-scaling-govtech-through-multilevel-partnership",
+    "deploying-urban-ai-in-an-era-of-tech-sovereignty",
+    "the-city-as-a-living-system-navigating-the-era-of-agentic-ai",
+    "people-centred-smart-cities-making-ai-work-for-cities-and-people",
+    "data-spaces-in-intelligent-territories-from-vision-to-impact",
+    "urban-ai-sharing-municipal-solutions-to-urban-challenges",
+    "from-city-data-to-city-action-how-ai-empowers-municipal-teams",
+    "govtech-public-innovation",
+    "whose-data-is-it-anyway"
+  ],
+
   storageKeys: {
     favorites: "smartCityExpo:favorits",
     attendance: "smartCityExpo:assistencia",

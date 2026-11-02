@@ -5,7 +5,7 @@
 (function () {
   let mods = null;
   let catalog = null;
-  const EMPTY_FILTERS = { q: "", day: "", format: "", venueId: "", zone: "", trackId: "", access: "", preferits: false, pendents: false, triats: false };
+  const EMPTY_FILTERS = { q: "", day: "", format: "", venueId: "", zone: "", trackId: "", access: "", preferits: false, pendents: false, triats: false, recomanades: false };
   let filters = { ...EMPTY_FILTERS };
 
   const SELECT_IDS = {
@@ -53,6 +53,7 @@
     if (filters.preferits && !mods.state.isFavorite(item)) return false;
     if (filters.pendents && mods.state.isAttending(item)) return false;
     if (filters.triats && !mods.state.isAttending(item)) return false;
+    if (filters.recomanades && !window.APP.recommendedEventIds.includes(item.id)) return false;
     return true;
   }
 
@@ -119,7 +120,7 @@
     });
     const q = document.getElementById("sce-search");
     if (q) q.value = "";
-    ["btn-filter-preferits", "btn-filter-pendents", "btn-filter-triats"].forEach((id) => {
+    ["btn-filter-preferits", "btn-filter-pendents", "btn-filter-triats", "btn-filter-recomanades"].forEach((id) => {
       const btn = document.getElementById(id);
       if (btn) btn.classList.add("ds-button--ghost");
     });
@@ -140,6 +141,7 @@
     toggle("btn-filter-preferits", "preferits");
     toggle("btn-filter-pendents", "pendents");
     toggle("btn-filter-triats", "triats");
+    toggle("btn-filter-recomanades", "recomanades");
 
     for (const [key, id] of Object.entries(SELECT_IDS)) {
       const sel = document.getElementById(id);
@@ -224,14 +226,16 @@
       mods = { storage, status, data, state: stateMod, ui };
     }
 
-    filters = { ...EMPTY_FILTERS };
     const params = new URLSearchParams(location.search);
+    filters = { ...EMPTY_FILTERS, recomanades: params.get("seleccio") === "1" };
 
     try {
       const { catalog: c } = await mods.data.loadCatalog();
       catalog = c;
       populateFilters();
       wireFilters();
+      const recommendedButton = document.getElementById("btn-filter-recomanades");
+      if (recommendedButton) recommendedButton.classList.toggle("ds-button--ghost", !filters.recomanades);
 
       for (const [param, key] of [["day", "day"], ["format", "format"]]) {
         const v = params.get(param);

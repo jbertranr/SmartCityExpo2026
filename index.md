@@ -53,6 +53,9 @@ Prefix d'ids/classes de la UI: `sce-`.
 - Format de sessió = text lliure de la font (25 valors); es filtra dinàmicament, sense paleta fixa.
 - La barra lateral de cada targeta es colora per **accés**.
 - Fus horari fix **Europe/Madrid** (`status.js`: `nowAsEventWallClock` / `planAsEventWallClock`), independent del dispositiu.
+- La pantalla **Explora** inclou una "Selecció recomanada" editorial de 10 sessions,
+  centrada en IA urbana, dades municipals i innovació pública. És una vista fixa,
+  independent dels preferits de cada usuari, definida a `js/config.js`.
 
 ## Com reimportar
 
