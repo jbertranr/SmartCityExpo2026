@@ -159,6 +159,11 @@ export function renderEventCard(item, { wallClock, startingSoonMinutes, onOpen, 
 
   const text = el("div", "sce-card__text");
   text.append(el("p", "sce-card__title", item.title));
+  if (item.speakers && item.speakers.length) {
+    const names = item.speakers.slice(0, 2).map((speaker) => speaker.name).join(" · ");
+    const suffix = item.speakers.length > 2 ? ` + ${item.speakers.length - 2}` : "";
+    text.append(el("p", "sce-card__speakers", `${names}${suffix}`));
+  }
 
   const timeLine = el("p", "sce-card__time");
   timeLine.append(iconEl("fa-solid fa-calendar-day"), document.createTextNode(" " + formatEventDateTime(item)));

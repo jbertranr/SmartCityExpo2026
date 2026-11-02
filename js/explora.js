@@ -17,6 +17,10 @@
     access: "sce-filter-access"
   };
 
+  function normalizeSearch(value) {
+    return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("ca").trim();
+  }
+
   function wallClockNow() {
     const mode = mods.state.getPlanMode();
     if (mode === "planificar") {
@@ -47,7 +51,7 @@
     if (filters.trackId && !(item.trackIds || []).includes(filters.trackId)) return false;
     if (filters.access && item.access !== filters.access) return false;
     if (filters.q) {
-      const hay = [item.title, ...(item.speakers || []).map((s) => `${s.name} ${s.role || ""}`)].join(" ").toLowerCase();
+      const hay = normalizeSearch([item.title, ...(item.speakers || []).map((s) => `${s.name} ${s.role || ""}`)].join(" "));
       if (!hay.includes(filters.q)) return false;
     }
     if (filters.preferits && !mods.state.isFavorite(item)) return false;
@@ -153,7 +157,7 @@
     const q = document.getElementById("sce-search");
     if (q && !q.__sceWired) {
       q.__sceWired = true;
-      q.addEventListener("input", () => { filters.q = q.value.trim().toLowerCase(); render(); });
+      q.addEventListener("input", () => { filters.q = normalizeSearch(q.value); render(); });
     }
   }
 
