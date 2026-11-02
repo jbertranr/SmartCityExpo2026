@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "smartCityExpo",
+  "label": "Smart City Expo 2026",
+  "category": "99_test",
+  "path": "99_test/prj_smart_city_expo/aplicacions/smartCityExpo",
+  "description": "Guia de butxaca no oficial de les sessions del Smart City Expo World Congress 2026 (3–5 nov, Fira Barcelona Gran Via): catàleg de sessions, estat temporal en viu, preferits/assistència. 422/422 sessions importades de l'agenda oficial — vegeu INFORME_COBERTURA.md.",
+  "normatives": [
+    "norm-web-vanilla"
+  ],
+  "documentation": {
+    "readme": "99_test/prj_smart_city_expo/aplicacions/smartCityExpo/README.md",
+    "claude": "99_test/prj_smart_city_expo/aplicacions/smartCityExpo/CLAUDE.md"
+  },
+  "workspace": {
+    "includeNormatives": true,
+    "includeDesignSystem": true
+  },
+  "services": [],
+  "pages": [
+    {
+      "label": "Smart City Expo 2026 — Explora",
+      "path": "99_test/prj_smart_city_expo/aplicacions/smartCityExpo/index.html"
+    }
+  ]
+}

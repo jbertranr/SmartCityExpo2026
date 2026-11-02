@@ -1,0 +1,236 @@
+{
+ "venues": [
+  {
+   "id": "europa-suites",
+   "name": "Europa Suites",
+   "zone": "Altres espais",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: Europa Suites\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "main-entrance-hall-europa",
+   "name": "Main Entrance: Hall Europa",
+   "zone": "Altres espais",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: Main Entrance: Hall Europa\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc1-room-1-1",
+   "name": "CC1 – Room 1.1",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC1 – Room 1.1\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc1-room-1-2",
+   "name": "CC1 – Room 1.2",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC1 – Room 1.2\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc1-room-1-3",
+   "name": "CC1 – Room 1.3",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC1 – Room 1.3\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc1-room-1-4",
+   "name": "CC1 – Room 1.4",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC1 – Room 1.4\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc1-room-1-5",
+   "name": "CC1 – Room 1.5",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC1 – Room 1.5\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc3-room-3-15",
+   "name": "CC3 – Room 3.15",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC3 – Room 3.15\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc3-room-3-17",
+   "name": "CC3 – Room 3.17",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC3 – Room 3.17\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc4-room-4-1",
+   "name": "CC4 – Room 4.1",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC4 – Room 4.1\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc4-room-4-2",
+   "name": "CC4 – Room 4.2",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC4 – Room 4.2\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc4-room-4-3",
+   "name": "CC4 – Room 4.3",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC4 – Room 4.3\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc4-room-4-4",
+   "name": "CC4 – Room 4.4",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC4 – Room 4.4\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc4-room-4-5",
+   "name": "CC4 – Room 4.5",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC4 – Room 4.5\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc4-room-4-6",
+   "name": "CC4 – Room 4.6",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC4 – Room 4.6\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc5-room-5-1",
+   "name": "CC5 – Room 5.1",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC5 – Room 5.1\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc5-room-5-2",
+   "name": "CC5 – Room 5.2",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC5 – Room 5.2\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cc5-room-5-3",
+   "name": "CC5 – Room 5.3",
+   "zone": "Centre de Convencions (sales)",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Zone: CC5 – Room 5.3\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "ai-x-cities",
+   "name": "AI X Cities",
+   "zone": "Escenaris de l'expo",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Stage: AI X Cities\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "blue-economy",
+   "name": "Blue Economy",
+   "zone": "Escenaris de l'expo",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Stage: Blue Economy\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "cities-x-people",
+   "name": "Cities X People",
+   "zone": "Escenaris de l'expo",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Stage: Cities X People\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "hows-barcelona",
+   "name": "HOWS Barcelona",
+   "zone": "Escenaris de l'expo",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Stage: HOWS Barcelona\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "impact-tech",
+   "name": "Impact Tech",
+   "zone": "Escenaris de l'expo",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Stage: Impact Tech\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "innovation-playground",
+   "name": "Innovation Playground",
+   "zone": "Escenaris de l'expo",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Stage: Innovation Playground\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "main-stage",
+   "name": "Main Stage",
+   "zone": "Escenaris de l'expo",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Main Stage\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "move-better",
+   "name": "Move Better",
+   "zone": "Escenaris de l'expo",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Stage: Move Better\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "shaping-mobility",
+   "name": "Shaping Mobility",
+   "zone": "Escenaris de l'expo",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Stage: Shaping Mobility\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "the-market",
+   "name": "The Market",
+   "zone": "Escenaris de l'expo",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"The Market\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  },
+  {
+   "id": "urban-systems",
+   "name": "Urban Systems",
+   "zone": "Escenaris de l'expo",
+   "address": "Fira Barcelona Gran Via (L'Hospitalet de Llobregat)",
+   "venueStatus": "verified-official",
+   "notesCa": "Nom de l'espai tal com apareix a la fitxa oficial de cada sessió (camp \"Stage: Urban Systems\"). Tots els espais són dins del recinte de Fira Gran Via; no es dona cap plànol ni coordenades per sala."
+  }
+ ]
+}

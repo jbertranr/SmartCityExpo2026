@@ -1,0 +1,15 @@
+{
+  "name": "Smart City Expo 2026",
+  "short_name": "SCE 2026",
+  "description": "Guia de butxaca no oficial · 3–5 nov, Barcelona. Sessions del Smart City Expo World Congress 2026 a Fira Barcelona Gran Via.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1857c4",
+  "lang": "ca",
+  "icons": [
+    { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

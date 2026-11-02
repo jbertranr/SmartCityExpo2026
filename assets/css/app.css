@@ -1,0 +1,583 @@
+/* ============================================================
+   Smart City Expo 2026 — afegits propis (per sobre del design-system
+   compartit). Mòbil-first: dissenyat a 390px, comprovat a 320/360/430
+   i escriptori. Tot fa servir els tokens --ds-color-x / --ds-space-x
+   de la skin activa, amb els overrides locals següents.
+   ============================================================ */
+
+/* [hidden] ha de guanyar sempre. Diversos components d'aquesta app
+   defineixen el seu propi `display` (p. ex. .sce-plan-fields amb display:flex): com que l'origen "autor" batega el de l'agent
+   d'usuari encara que l'especificitat empati, la regla nativa
+   [hidden]{display:none} quedaria tapada i `el.hidden = true` no
+   amagaria res (bug real, ja corregit a visaOffPerpinya — es manté
+   aquí des del principi). */
+[hidden] {
+  display: none !important;
+}
+
+/* Amagat a propòsit: substituïda pel menú hamburguesa (.sce-nav-menu,
+   obert des de #btn-open-nav a la capçalera) — mateix patró que
+   visaOffPerpinya. El codi de tabbar.js es deixa tal com és. */
+.ds-tabbar {
+  display: none;
+}
+
+/* Override local, només d'aquesta app: fons blanc en lloc del gris
+   blavós per defecte de skin-neutra (--ds-color-bg: #eef0f4) — no es
+   toca l'skin compartida perquè no afecti la resta d'apps que la fan
+   servir. */
+:root[data-ds-skin="neutra"] {
+  --ds-color-bg: #ffffff;
+}
+
+/* Evita el desplaçament lateral accidental en gestos tàctils. */
+html, body {
+  overflow-x: hidden;
+  touch-action: pan-y pinch-zoom;
+}
+.ds-modal__body {
+  overflow-x: hidden;
+  touch-action: pan-y pinch-zoom;
+}
+
+/* Mida de lletra (accessibilitat, botó a la capçalera — js/fontsize.js). */
+html.sce-text-lg { font-size: 112.5%; }
+html.sce-text-xl { font-size: 125%; }
+
+/* ── Capçalera (.ds-site-header del design-system, sticky, sense logo) ── */
+.sce-header-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--ds-color-surface);
+}
+
+.sce-header-wrap .ds-site-header {
+  padding: var(--ds-space-2) var(--ds-space-4);
+  gap: var(--ds-space-2);
+  flex-direction: row;
+  align-items: center;
+}
+
+.sce-header-wrap .ds-site-header__text {
+  border: none;
+  padding: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.sce-header-wrap .ds-site-header__title {
+  font-size: 0.92rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sce-header-wrap .ds-site-header__subtitle {
+  font-size: 0.68rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sce-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-1);
+  flex-shrink: 0;
+}
+
+.sce-header__date-btn,
+.sce-header__fontsize-btn,
+.sce-header__menu-btn {
+  flex-shrink: 0;
+}
+
+.sce-header-wrap .ds-icon-button {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* ── Menú hamburguesa ── */
+.sce-nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-1);
+}
+
+.sce-nav-menu__item {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-3);
+  padding: var(--ds-space-3);
+  border-radius: var(--ds-radius);
+  color: inherit;
+  text-decoration: none;
+}
+.sce-nav-menu__item:hover,
+.sce-nav-menu__item:focus-visible {
+  background: var(--ds-color-surface-alt);
+}
+.sce-nav-menu__item.is-active {
+  background: var(--ds-color-primary-xlight);
+}
+
+.sce-nav-menu__icon {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ds-color-primary-xlight);
+  color: var(--ds-color-primary);
+  font-size: 1.05rem;
+}
+
+.sce-nav-menu__text { min-width: 0; }
+.sce-nav-menu__title {
+  display: block;
+  font-weight: 700;
+  color: var(--ds-color-text);
+}
+.sce-nav-menu__desc {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.82rem;
+  color: var(--ds-color-muted);
+}
+
+.sce-nav-menu__divider {
+  border: none;
+  border-top: 1px solid var(--ds-color-border);
+  margin: var(--ds-space-3) 0;
+}
+.sce-backup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ds-space-2);
+}
+
+/* Fila de filtres ràpids (Preferits/Pendents). */
+.sce-filters {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+  padding: var(--ds-space-3) var(--ds-space-4);
+  overflow-x: auto;
+  border-bottom: 1px solid var(--ds-color-border);
+}
+
+/* ── Contingut ── */
+#main-content.ds-main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--ds-space-4);
+  padding-bottom: calc(var(--ds-space-4) + env(safe-area-inset-bottom, 0px));
+  min-height: calc(100vh - 64px);
+}
+
+.sce-section-title {
+  margin: var(--ds-space-5) 0 var(--ds-space-2);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ds-color-muted);
+}
+.sce-section-title:first-child { margin-top: 0; }
+
+/* ── Grup per seu ── */
+.sce-venue-group {
+  margin-bottom: var(--ds-space-5);
+  padding-bottom: var(--ds-space-4);
+  border-bottom: 1px solid var(--ds-color-border);
+}
+.sce-venue-group:last-child { border-bottom: none; }
+
+.sce-venue-group__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin-bottom: var(--ds-space-1);
+}
+
+.sce-venue-group__title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ds-color-primary);
+}
+.sce-venue-group__title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--ds-color-accent);
+  margin-right: var(--ds-space-2);
+  vertical-align: middle;
+}
+
+.sce-venue-group__meta {
+  margin: 0;
+  font-size: 0.74rem;
+  color: var(--ds-color-muted);
+}
+
+.sce-venue-group__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-2);
+}
+
+/* ── Targeta d'esdeveniment ── */
+.sce-card {
+  padding: var(--ds-space-3) var(--ds-space-3) var(--ds-space-3) calc(var(--ds-space-3) + 4px);
+  overflow: hidden;
+}
+
+/* Bug del design-system compartit (13/09/2026, no corregit aquí —
+   només sobreescrit localment): .ds-card--status-start::before porta
+   `background: var(--ds-color-primary)` fix, sense llegir mai
+   `--ds-card-color` (encara que el comentari del propi card.css digui
+   que "combina amb --primary/--accent/--success... via var(--ds-color-*)").
+   Sense això, totes les targetes sortien amb la barra blava fixa
+   independentment del format — proposar-ho com a fix al design-system
+   compartit (`components/card.css`). */
+.sce-card.ds-card--status-start::before {
+  background: var(--ds-card-color, var(--ds-color-primary));
+}
+
+.sce-card__top {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+  margin-bottom: var(--ds-space-1);
+  min-height: 0;
+}
+
+/* Preferit + "Hi vaig": requadrats, un al costat de l'altre, en aquest
+   ordre (a petició de l'usuari, 13/09/2026) — abans "Hi vaig" només es
+   podia marcar des de la fitxa; ara també des de la targeta petita. */
+.sce-card__action-btns {
+  margin-left: auto;
+  display: flex;
+  gap: var(--ds-space-1);
+  flex-shrink: 0;
+}
+.sce-card__action-btn {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--ds-radius-sm);
+  border: 1px solid var(--ds-color-border);
+  background: var(--ds-color-surface);
+  color: var(--ds-color-muted);
+  font-size: 1rem;
+  cursor: pointer;
+}
+.sce-card__action-btn:hover { background: var(--ds-color-surface-alt); }
+.sce-card__action-btn--fav.is-active {
+  color: var(--ds-color-warning);
+  border-color: var(--ds-color-warning);
+}
+.sce-card__action-btn--attend.is-active {
+  color: var(--ds-color-success);
+  border-color: var(--ds-color-success);
+}
+
+.sce-card__body {
+  display: block;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  min-height: 44px;
+  text-decoration: none;
+  color: inherit;
+}
+.sce-card__text { min-width: 0; }
+.sce-card__body:hover,
+.sce-card__body:visited,
+.sce-card__body:active { text-decoration: none; color: inherit; }
+
+.sce-card__title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ds-color-text);
+}
+
+.sce-card__topic {
+  margin: 0 0 var(--ds-space-2);
+  font-size: 0.8rem;
+  color: var(--ds-color-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sce-card__time {
+  margin: 0 0 var(--ds-space-1);
+  font-size: 0.78rem;
+  color: var(--ds-color-primary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sce-card__venue {
+  margin: 0 0 var(--ds-space-2);
+  font-size: 0.74rem;
+  color: var(--ds-color-muted);
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 4px var(--ds-space-2);
+}
+.sce-card__venue .ds-badge { flex-shrink: 0; }
+.sce-card__venue i { margin-top: 2px; flex-shrink: 0; color: var(--ds-color-primary); }
+
+.sce-card__venue-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.sce-card__venue-name { font-weight: 600; }
+.sce-card__venue-zone { white-space: normal; overflow-wrap: anywhere; }
+
+.sce-card__status { font-size: 0.78rem; }
+
+/* ── Distintius de format i accés ── */
+.sce-badge--format { background: var(--ds-color-surface-alt); color: var(--ds-color-text); }
+
+/* ── Mode Ara/Planificar ── */
+.sce-plan-toggle {
+  display: flex;
+  gap: var(--ds-space-2);
+  margin-bottom: var(--ds-space-3);
+}
+.sce-plan-toggle button { flex: 1; }
+
+.sce-plan-fields {
+  display: flex;
+  gap: var(--ds-space-2);
+  margin-bottom: var(--ds-space-3);
+}
+.sce-plan-fields > * { flex: 1; }
+
+.sce-loading {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+  padding: var(--ds-space-6) 0;
+  justify-content: center;
+}
+
+/* ── Explora: barra de filtres (dia / format / espai / temàtica / accés) ──
+   Agrupats visualment en un panell (abans: 4 <select> flotant
+   directament sobre el fons de la pàgina, sense cap relació visual
+   entre ells). */
+.sce-explora-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ds-space-2);
+  margin-bottom: var(--ds-space-2);
+  padding: var(--ds-space-3);
+  background: var(--ds-color-surface);
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius);
+  box-shadow: var(--ds-shadow-sm);
+}
+/* Icona dins de cada select de filtre (dia/format/espai/zona/temàtica/accés) —
+   mateix truc que un input amb icona: el select porta padding-left extra
+   i la icona es posiciona a sobre, absoluta i sense interceptar el clic. */
+.sce-select-icon {
+  position: relative;
+  min-width: 0;
+}
+.sce-explora-toolbar .sce-select-icon {
+  flex: 1 1 140px;
+}
+.sce-select-icon > i {
+  position: absolute;
+  left: var(--ds-space-2);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ds-color-primary);
+  font-size: 0.75rem;
+  pointer-events: none;
+}
+.sce-select-icon > select {
+  width: 100%;
+  padding-left: var(--ds-space-6);
+  padding-right: var(--ds-space-2);
+  font-size: 0.8rem;
+}
+.sce-explora-results {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--ds-space-3);
+}
+.sce-results-pill { flex-shrink: 0; white-space: nowrap; }
+
+/* ── Fitxa d'esdeveniment ── */
+.sce-fitxa__back { margin-bottom: var(--ds-space-3); }
+
+.sce-fitxa-card {
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-lg);
+  background: var(--ds-color-surface);
+  box-shadow: var(--ds-shadow-sm);
+  padding: var(--ds-space-4);
+}
+
+.sce-fitxa__bullets {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: var(--ds-space-1);
+  column-gap: var(--ds-space-2);
+}
+.sce-fitxa__bullets .ds-badge {
+  font-size: 0.66rem;
+  padding: 0.1rem 0.5rem;
+}
+.sce-fitxa__bullets .ds-status {
+  font-size: 0.72rem;
+  gap: var(--ds-space-1);
+}
+.sce-fitxa__bullets-spacer { flex: 1; min-width: var(--ds-space-2); }
+
+.sce-fitxa__bullet-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--ds-color-border);
+  background: var(--ds-color-surface);
+  color: var(--ds-color-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.sce-fitxa__bullet-btn--fav.is-active { color: var(--ds-color-warning); border-color: var(--ds-color-warning); }
+.sce-fitxa__bullet-btn--attend.is-active { color: var(--ds-color-success); border-color: var(--ds-color-success); }
+
+.sce-fitxa__divider {
+  border: none;
+  border-top: 2px dotted var(--ds-color-border);
+  margin: var(--ds-space-4) 0;
+}
+
+.sce-fitxa__title {
+  margin: var(--ds-space-2) 0 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ds-color-primary);
+}
+
+.sce-fitxa__description p + p {
+  margin-top: var(--ds-space-3);
+}
+/* Bug real (13/09/2026): alguns textos raspats porten un URL llarg sense
+   espais enmig d'una frase (p. ex. "Press release: https://www.einpress
+   wire.com/article/..."). Sense overflow-wrap, aquest únic "mot" llarg
+   fa que el paràgraf (i la targeta sencera, per l'scrollWidth en cascada)
+   sobreïxi de l'amplada disponible i es desquadri. overflow-wrap és una
+   propietat heretada — n'hi ha prou de fixar-la aquí, no cal repetir-la a
+   cada <p> fill. */
+.sce-fitxa__description {
+  overflow-wrap: anywhere;
+}
+
+.sce-fitxa__actions {
+  display: flex;
+  gap: var(--ds-space-2);
+  flex-wrap: wrap;
+}
+
+.sce-fitxa__block h2 {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ds-color-muted);
+  margin: 0 0 var(--ds-space-2);
+}
+.sce-fitxa__block h2 i {
+  color: var(--ds-color-primary);
+  font-size: 0.85rem;
+}
+
+.sce-fitxa__venue-name {
+  font-weight: 700;
+  color: var(--ds-color-primary);
+}
+
+/* ── Utilitats ── */
+.sce-sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* ── Cercador i filtres ── */
+.sce-select-icon > input {
+  width: 100%;
+  padding-left: var(--ds-space-6);
+  font-size: 0.8rem;
+}
+.sce-explora-toolbar .sce-select-icon:first-child { flex-basis: 100%; }
+
+/* ── Targeta: temàtiques i espai ── */
+.sce-card__tracks {
+  margin: 0 0 var(--ds-space-2);
+  font-size: 0.74rem;
+  color: var(--ds-color-muted);
+  overflow-wrap: anywhere;
+}
+.sce-more-btn { width: 100%; margin-top: var(--ds-space-2); }
+
+/* ── Ara: seccions ── */
+.sce-ara-section { margin-bottom: var(--ds-space-4); }
+.sce-ara-section__title {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+  margin: 0 0 var(--ds-space-2);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ds-color-muted);
+}
+.sce-ara-section__title i { color: var(--ds-color-primary); }
+.sce-ara-cards { display: flex; flex-direction: column; gap: var(--ds-space-2); }
+.sce-ara-done > summary { cursor: pointer; font-weight: 700; margin-bottom: var(--ds-space-2); }
+
+/* ── Fitxa: temàtiques i ponents ── */
+.sce-fitxa__tags { display: flex; flex-wrap: wrap; gap: var(--ds-space-1); margin: var(--ds-space-2) 0; }
+.sce-fitxa__speakers { margin: 0; padding-left: var(--ds-space-4); overflow-wrap: anywhere; }
+.sce-fitxa__speakers li { margin-bottom: var(--ds-space-1); }
+.sce-fitxa__more > summary { cursor: pointer; margin: var(--ds-space-2) 0; color: var(--ds-color-primary); }

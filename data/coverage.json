@@ -1,0 +1,37 @@
+{
+ "lastUpdated": "2026-11-02",
+ "officialSiteTotalListed": 422,
+ "imported": 422,
+ "byRecordStatus": {
+  "confirmed": 422,
+  "tentative": 0,
+  "pending": 0
+ },
+ "byAccess": {
+  "All Passes": 333,
+  "Access by invitation only": 56,
+  "Open Side Event": 4,
+  "Visitor Pass not allowed": 29
+ },
+ "withSpeakers": 201,
+ "withDescription": 416,
+ "sourcesChecked": [
+  {
+   "name": "smartcityexpo.com/agenda (sitemap.xml + fitxa de cada sessió)",
+   "status": "imported",
+   "notesCa": "422 sessions llistades al sitemap oficial el 2026-11-02 10:45 GMT; totes importades amb data, hora, espai, format, temàtica, accés i ponents."
+  },
+  {
+   "name": "Esdeveniments paral·lels fora de Fira (OFF)",
+   "status": "pending",
+   "notesCa": "No consultats: només s'inclou el programa oficial dins de Fira Gran Via."
+  }
+ ],
+ "knownGaps": [
+  "El programa oficial pot canviar fins i tot durant el congrés; cal repetir la importació.",
+  "Moltes sessions són 'Private Side Event' / només per invitació: es mostren amb l'accés indicat, sense assumir que siguin obertes.",
+  "No hi ha plànol per sala ni coordenades: tot passa al recinte de Fira Gran Via.",
+  "No s'han importat les exhibicions, expositors ni els City Tours (només l'agenda de sessions)."
+ ],
+ "conflicts": []
+}

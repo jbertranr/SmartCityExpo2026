@@ -1,0 +1,56 @@
+{
+ "tracks": [
+  {
+   "id": "blue-economy",
+   "name": "Blue Economy"
+  },
+  {
+   "id": "enabling-technologies",
+   "name": "Enabling Technologies"
+  },
+  {
+   "id": "energy-environment",
+   "name": "Energy & Environment"
+  },
+  {
+   "id": "governance-economy",
+   "name": "Governance & Economy"
+  },
+  {
+   "id": "housing",
+   "name": "Housing"
+  },
+  {
+   "id": "housing-building-innovation",
+   "name": "Housing – Building Innovation"
+  },
+  {
+   "id": "housing-housing-regulation",
+   "name": "Housing – Housing Regulation"
+  },
+  {
+   "id": "housing-renovation-retrofit-reuse",
+   "name": "Housing – Renovation, Retrofit, Reuse"
+  },
+  {
+   "id": "housing-social-affordable-housing",
+   "name": "Housing – Social & Affordable Housing"
+  },
+  {
+   "id": "housing-urban-planning-land-policy",
+   "name": "Housing – Urban Planning & Land Policy"
+  },
+  {
+   "id": "infrastructure-building",
+   "name": "Infrastructure & Building"
+  },
+  {
+   "id": "living-inclusion",
+   "name": "Living & Inclusion"
+  },
+  {
+   "id": "mobility",
+   "name": "Mobility"
+  }
+ ]
+}
